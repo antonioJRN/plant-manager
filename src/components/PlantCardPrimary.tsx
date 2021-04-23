@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, TouchableOpacity, StyleSheet, TouchableOpacityProps } from 'react-native';
+import { SvgFromUri } from 'react-native-svg';
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';
@@ -17,6 +18,7 @@ export const PlantCardPrimary = ({ data, ...rest}: PlantProps) => {
       style={styles.container}
       {...rest}
     >
+      <SvgFromUri uri={data.photo} width={70} height={70} />
       <Text style={styles.text}>{data.name}</Text>
     </RectButton>
   )
